@@ -1,0 +1,33 @@
+:root{
+    --txt-color-01: #555;            /* Колір основного тексту */
+    --txt-color-02: #ccc               /* Колір тексту інверсія */
+    --header-color: #333               /* Колір заголовків */
+    --lnk-color: #930;                 /* Колір покликань */ 
+    --lnk-hover: #f30;               /* Колір при наведенні */
+    --bg-main-color: #ccc;           /* Колір основного фону */
+    --bg-second-color: #555;         /* Колір фону2 */
+    --mob-pading: 20px;                /* Відступи до контенту на смартфонах */
+    --max-width: 1600px;                /*  */
+}
+
+html, body {
+
+    font-family: sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;                   /* Міжрядковий інтервал 140% */
+    font-style: normal;
+    color: var(--txt-color-01);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+h1 { font-size: 2rem;}
+h2 { font-size: 1.5rem;}
+h3 { font-size: 1.35rex;}
+

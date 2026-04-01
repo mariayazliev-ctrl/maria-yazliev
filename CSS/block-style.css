@@ -1,0 +1,13 @@
+div{
+    border: 4px solid #963;
+    max-width: 900px;
+    margin-left: auto; /* Центрування блоку */
+    margin-right: auto; /* по горизонталі */
+    padding: 25px;
+    padding-bottom: 50px;
+}
+
+div span{
+    display: block;
+    font-weight: bolder;
+}
