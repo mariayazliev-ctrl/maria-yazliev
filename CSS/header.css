@@ -1,0 +1,42 @@
+header {
+    background-color: var(--bg-main-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+header .row {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Елементи один під одним */
+    justify-content: center; /* Центр по вертикалі */
+    align-items: center;    /* Центр по горизонталі */
+    text-align: center;
+}
+
+header .col.c1 {       
+    font-weight: 700;
+}
+
+header .col.c1 h2 {       
+    margin-top: -40px;
+}
+
+
+
+
+header .col.c2 {
+
+}
+
+.fullscreen-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0; 
+}
+
+
+

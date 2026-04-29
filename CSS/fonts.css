@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Inter"; 
+    src: url('../fonts/Inter_18pt-Regular.woff') format('woff');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+
+@font-face{
+    font-family: "Inter";
+    src: url('../fonts/Inter_18pt-Bold.woff') format('woff');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face{
+    font-family: "Tinos";
+    src: url('../fonts/Tinos-Bold.woff') format('woff');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}

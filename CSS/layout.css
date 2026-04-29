@@ -1,33 +1,72 @@
 :root{
-    --txt-color-01: #555;            /* Колір основного тексту */
-    --txt-color-02: #ccc               /* Колір тексту інверсія */
-    --header-color: #333               /* Колір заголовків */
+    --txt-color-01: #fff;            /* Колір основного тексту */
+    --txt-color-02: #fff;               /* Колір тексту інверсія */
+    --header-color: #fff;               /* Колір заголовків */
     --lnk-color: #930;                 /* Колір покликань */ 
     --lnk-hover: #f30;               /* Колір при наведенні */
-    --bg-main-color: #ccc;           /* Колір основного фону */
-    --bg-second-color: #555;         /* Колір фону2 */
+    --bg-main-color: #232323;           /* Колір основного фону */
+    --bg-second-color: #000;         /* Колір фону2 */
     --mob-pading: 20px;                /* Відступи до контенту на смартфонах */
     --max-width: 1600px;                /*  */
 }
 
 html, body {
-
-    font-family: sans-serif;
+    font-family : "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.4;                   /* Міжрядковий інтервал 140% */
     font-style: normal;
     color: var(--txt-color-01);
+    background: var(--bg-main-color);
+    margin: 0; 
+    padding: 0
 }
 
-h1, h2, h3, h4, h5, h6{
-    font-family: sans-serif;
-    font-weight: 500;
+h1{
+    font-family: "Tinos", sans-serif;
     font-style: normal;
 }
 
-h1 { font-size: 2rem;}
-h2 { font-size: 1.5rem;}
-h3 { font-size: 1.35rex;}
+h2, h3, h4, h5, h6{
+    font-family : "Inter", sans-serif;
+    font-style: normal;
+}
 
+h1 { font-size: 16.67rem;}
+h2 { font-size: 4.17rem;}
+h3 { font-size: 3.56rem;}
+
+header > .inside,
+footer > .inside,
+section > .inside {
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--ipad-padding);
+    padding-right: var(--ipad-padding);
+}
+
+.fullscreen-center {
+    display: flex;
+    flex-direction: column;     /* Щоб елементи йшли один під одним */
+    justify-content: center;    /* Центрування по вертикалі */
+    align-items: center;        /* Центрування по горизонталі */
+    min-height: 100vh;          /* Висота = 100% висоти екрана (вікна браузера) */
+    text-align: center;
+}
+
+.img-box img {
+    display: block;
+    width: 100%;
+}
+
+
+@media (max-width;680px) {
+    header > .inside,
+    footer > .inside,
+    section > .inside {
+        padding-left: var(--mob-pading);
+        padding-right: var(--mob-pading);
+    }
+}
