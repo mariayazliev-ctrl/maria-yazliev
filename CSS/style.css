@@ -1,0 +1,49 @@
+/* style.css — Загальні властивості елементів */
+
+html, body {
+    font-family : "Inter", sans-serif;  /* Гарнітура для основного тексту */
+    font-size: 18px;        /* Розмір шрифта основного тексту */
+    line-height: 1.4;       /* Міжрядковий інтервал основного тексту в %/100 */
+    letter-spacing: .002em; /* Міжлітерний інтервал основного тексту збільшений на 2/1000 Em */
+    scroll-behavior: smooth;/* Плавна прокрутка під час переходу за якорем (ancor) */
+}
+
+h1{
+    font-family: "Tinos", sans-serif;
+    font-style: normal;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family : "Inter", sans-serif;  /* Гарнітура для заголовків */
+    font-weight: 400;                       /* Накреслення для заголовків */
+    line-height: 1.2;                       /* Міжрядковий інтервал для заголовків в %/100 */
+    letter-spacing: 0.005em;                /* Міжлітерний інтервал основного тексту збільшений на 2/1000 Em */
+    margin: 0 0 .5em;                       /* Відступ знизу після заголовку */
+    text-align: left;                       /* Вирівнювання тексту заголовків */
+}
+
+h1 { font-size: 16.67rem;}
+h2 { font-size: 4.17rem;}
+h3 { font-size: 2,8rem;}
+
+p {
+    margin-bottom: .75em;   /* Відступ знизу після абзацу */
+}
+
+a {
+    color: var(--txt-color-01);  /* Основний колір текстових лінків */
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--txt-color-01);  /* Колір текстових лінків (hover) при наведенні курсору */
+    text-decoration: none;
+}
+
+.img-box svg,
+.img-box img {
+    display: block; /* Відображати зображення (<img>, <svg>) всередині контейнера .img-box як блочний елемент */
+    width: 100%;
+}
+
+/* *************************************************************** */

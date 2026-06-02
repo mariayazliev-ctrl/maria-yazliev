@@ -1,7 +1,267 @@
 *,
 *::after,
 *::before {
-    box-sizing: border-box; /* Ширина блочних включає Border і padding */
-    margin: 0; /* Зовнішні відступи */
-    padding: 0; /* Внутнішні відступи */
+    box-sizing: border-box; /* Ширина блочних елементів включає рамку (border) та відступи (padding) */
+    margin: 0;              /* Зовнішні відступи */
+    padding: 0;             /* Внутрішні відступи */
+}
+
+/* normalize.css | Ліцензія MIT | */
+
+*,
+*:before,                   /* Для всіх елементів та для всіх псевдоелементів before та after */
+*:after {
+    box-sizing: border-box; /* В ширину блочних елементів включаємо padding та border */
+    margin: 0;              /* Зовнішні та внутрішні відступи = 0 */
+    padding: 0;
+}
+
+/**
+ * 1. Виправлення висоти рядка в усіх браузерах.
+ * 2. Запобігання автоматичній зміні розміру шрифту після зміни орієнтації в iOS.
+ */
+
+html {
+    line-height: 1.15;            /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Секції
+   ========================================================================== */
+
+/**
+ * Видалення відступів (margin) в усіх браузерах.
+ */
+
+body {
+    margin: 0;
+}
+
+a {
+    background-color: transparent;
+}
+
+/**
+ * Встановлення правильної насиченості шрифту (font-weight) в Chrome, Edge та Safari.
+ */
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+/**
+ * Видалення рамки (border) у зображень всередині посилань в IE 10.
+ */
+
+img {
+    border-style: none;
+}
+
+/* Форми
+   ========================================================================== */
+
+/**
+ * 1. Зміна стилів шрифту в усіх браузерах.
+ * 2. Видалення відступів (margin) у Firefox та Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%;      /* 1 */
+    line-height: 1.15;    /* 1 */
+    margin: 0;            /* 2 */
+}
+
+/**
+ * Відображення переповнення (overflow) в IE.
+ * 1. Відображення переповнення (overflow) в Edge.
+ */
+
+button,
+input { /* 1 */
+    overflow: visible;
+}
+
+/**
+ * Видалення успадкування трансформації тексту (text-transform) в Edge, Firefox та IE.
+ * 1. Видалення успадкування трансформації тексту у Firefox.
+ */
+
+button,
+select { /* 1 */
+    text-transform: none;
+}
+
+/**
+ * Виправлення неможливості стилізувати клікабельні елементи в iOS та Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+/**
+ * Видалення внутрішньої рамки (border) та відступів (padding) у Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+/**
+ * Відновлення стилів фокусу, які були скинуті попереднім правилом.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+/**
+ * Виправлення відступів (padding) у Firefox.
+ */
+
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Виправлення переносу тексту в Edge та IE.
+ * 2. Виправлення успадкування кольору від елементів `fieldset` в IE.
+ * 3. Видалення відступів (padding), щоб розробники не стикалися з несподіванками 
+ * при скиданні значень `fieldset` в усіх браузерах.
+ */
+
+legend {
+    box-sizing: border-box; /* 1 */
+    color: inherit;         /* 2 */
+    display: table;         /* 1 */
+    max-width: 100%;        /* 1 */
+    padding: 0;             /* 3 */
+    white-space: normal;    /* 1 */
+}
+
+/**
+ * Встановлення правильного вертикального вирівнювання в Chrome, Firefox та Opera.
+ */
+
+progress {
+    vertical-align: baseline;
+}
+
+/**
+ * Видалення стандартної вертикальної смуги прокрутки в IE 10+.
+ */
+
+textarea {
+    overflow: auto;
+}
+
+/**
+ * 1. Встановлення правильного розрахунку розмірів (box-sizing) в IE 10.
+ * 2. Видалення відступів (padding) в IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0;             /* 2 */
+}
+
+/**
+ * Виправлення стилю курсору для кнопок збільшення та зменшення значення в Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+/**
+ * 1. Виправлення дивного відображення в Chrome та Safari.
+ * 2. Виправлення стилю контуру (outline) в Safari.
+ */
+
+[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px;          /* 2 */
+}
+
+/**
+ * Видалення внутрішніх відступів в Chrome та Safari на macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * 1. Виправлення неможливості стилізувати клікабельні елементи в iOS та Safari.
+ * 2. Зміна властивостей шрифту на `inherit` (успадкування) в Safari.
+ */
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button; /* 1 */
+    font: inherit;              /* 2 */
+}
+
+/* Інтерактивні елементи
+   ========================================================================== */
+
+/*
+ * Встановлення правильного відображення (display) в Edge, IE 10+ та Firefox.
+ */
+
+details {
+    display: block;
+}
+
+/*
+ * Встановлення правильного відображення (display) в усіх браузерах.
+ */
+
+summary {
+    display: list-item;
+}
+
+/**
+ * Встановлення правильного відображення (display) в IE 10.
+ */
+
+[hidden] {
+    display: none;
 }

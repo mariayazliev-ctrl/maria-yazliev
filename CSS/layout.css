@@ -1,13 +1,18 @@
-:root{
+:root {
     --txt-color-01: #fff;            /* Колір основного тексту */
-    --txt-color-02: #fff;               /* Колір тексту інверсія */
-    --header-color: #fff;               /* Колір заголовків */
-    --lnk-color: #930;                 /* Колір покликань */ 
-    --lnk-hover: #f30;               /* Колір при наведенні */
-    --bg-main-color: #232323;           /* Колір основного фону */
-    --bg-second-color: #000;         /* Колір фону2 */
-    --mob-pading: 20px;                /* Відступи до контенту на смартфонах */
-    --max-width: 1600px;                /*  */
+    --txt-color-02: #fff;            /* Колір тексту інверсія */
+    --header-color: #fff;            /* Колір заголовків */
+    --lnk-color: #001735;            /* Колір покликань */ 
+    --lnk-hover: #004d5d;            /* Колір при наведенні */
+    --bg-main-color: #071427;        /* Колір основного фону */
+    --bg-second-color: #122947;        /* Колір фону2 */
+    --max-width: 1280px;
+    --mob-padding: 20px;
+    --ver-padding: 50px;
+    --bord-radius: 20px;
+    --ipad-padding: 20px;
+    --brg-width: 30px;
+    --brg-color: #fff;
 }
 
 html, body {
@@ -15,31 +20,79 @@ html, body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-size: 18px;
-    line-height: 1.4;                   /* Міжрядковий інтервал 140% */
+    line-height: 1.4;                   /* Міжрядковий інтервал */
     font-style: normal;
     color: var(--txt-color-01);
     background: var(--bg-main-color);
     margin: 0; 
-    padding: 0
+    padding: 0;                      
 }
 
-h1{
+header, section {
+    overflow: hidden;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+header, 
+.history, 
+.quiz-section {
+    background: linear-gradient(180deg, #071427 0%, #091930 50%, #122947 100%);
+}
+
+.definition, 
+.characteristics {
+    background: linear-gradient(180deg, #122947 0%, #091930 50%, #071427 100%);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.title {
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;                 
+    font-size: 2.8rem;
+    margin: 0;                        
+    padding-top: 70px;              
+    padding-bottom: 70px;            
+}
+
+.definition .title {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+#top section > div {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
     font-family: "Tinos", sans-serif;
     font-style: normal;
+    font-size: 16.67rem;
 }
 
-h2, h3, h4, h5, h6{
+h2, h3, h4, h5, h6 {
     font-family : "Inter", sans-serif;
     font-style: normal;
 }
 
-h1 { font-size: 16.67rem;}
 h2 { font-size: 4.17rem;}
-h3 { font-size: 3.56rem;}
+h3 { font-size: 2.8rem;}
 
 header > .inside,
 footer > .inside,
-section > .inside {
+section > .inside,
+.container {                           
     max-width: var(--max-width);
     margin-left: auto;
     margin-right: auto;
@@ -49,24 +102,14 @@ section > .inside {
 
 .fullscreen-center {
     display: flex;
-    flex-direction: column;     /* Щоб елементи йшли один під одним */
-    justify-content: center;    /* Центрування по вертикалі */
-    align-items: center;        /* Центрування по горизонталі */
-    min-height: 100vh;          /* Висота = 100% висоти екрана (вікна браузера) */
+    flex-direction: column;    
+    justify-content: center;    
+    align-items: center;        
+    min-height: 100vh;          
     text-align: center;
 }
 
 .img-box img {
     display: block;
     width: 100%;
-}
-
-
-@media (max-width;680px) {
-    header > .inside,
-    footer > .inside,
-    section > .inside {
-        padding-left: var(--mob-pading);
-        padding-right: var(--mob-pading);
-    }
 }

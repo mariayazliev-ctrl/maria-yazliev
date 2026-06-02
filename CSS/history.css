@@ -1,0 +1,24 @@
+.history {
+    background-color: var(--bg-second-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 60px;
+}
+
+.history-content {
+    margin: 0 auto; 
+}
+
+.history-content p {
+    font-family: "Inter", sans-serif;
+    font-size: 1.4rem;
+    
+    text-align: justify; 
+    
+    margin-bottom: 30px; 
+}
+
+.history-content p:last-child {
+    margin-bottom: 0;
+}
